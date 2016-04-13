@@ -1,0 +1,72 @@
+\documentclass[10pt, CJK, mathserif]{beamer}
+\mode<presentation>
+{
+    \usetheme{CambridgeUS}
+%    Szeged Berkeley beaver Amsterdam Copenhagen Berlin
+
+    \usecolortheme{dolphin}
+%    beaver crane dove lily orchid rose seagull seahorse sidebartab spruce whale wolverine
+
+    \setbeamercovered{dynamic}
+    \setbeamertemplate{navigation symbols}{}    % hide navigation bars
+    \setbeamertemplate{caption}[numbered]
+}
+\usepackage{CJK}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[english]{babel}
+\usepackage{color, graphicx}
+%\usepackage{wrapfig}
+\usepackage{url}
+\usepackage{bm}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+%\usepackage{fourier}
+%\usepackage{charter}
+%\usepackage{helvet}
+\usepackage{hyperref}
+
+\DeclareMathOperator*{\argmin}{arg\,min} 
+
+\begin{document}
+\begin{CJK*}{GBK}{song}
+
+\title[卷积神经网络]{ 卷积神经网络 \\ Introduction to Convolutional Neural Network}
+\author{ {薛盛可} \\ xueshengke@zju.edu.cn}
+\institute[ISEE]{\normalsize College of Information Science and Electronic Engineering \\~\\ Zhejiang University}
+\date{Spring, 2016}
+
+\AtBeginSection[]
+{
+    \begin{frame}<beamer>{Outline}   % Outline 目录
+        \tableofcontents[currentsection]
+%        \tableofcontents[currentsection, currentsubsection]
+    \end{frame}
+}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\input{section/Introduction}
+\input{section/CNN}
+\input{section/Feedforward}
+\input{section/Backpropagation}
+\input{section/Application}
+\input{section/Trial}
+
+\section{参考文献}
+\begin{frame}[allowframebreaks]{Bibliography}
+    \label{Reference}
+    \bibliographystyle{apalike}
+    \bibliography{mybibliography}
+\end{frame}
+
+\section*{致谢}
+\begin{frame}{End}
+  \Huge 谢谢！ \\ ~ \\
+  Thanks for your listening.
+\end{frame}
+
+\end{CJK*}
+\end{document}

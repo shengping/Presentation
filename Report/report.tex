@@ -1,0 +1,35 @@
+% !TeX spellcheck = <none>
+\documentclass[hyperref,UTF8,a4paper,10pt]{ctexart}
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
+\usepackage{times}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{color, graphicx}
+\usepackage{url}
+\usepackage{bm}
+%\usepackage{hyperref}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newtheorem{myDef}{Definition}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\title{ 卷积神经网络 \\ Introduction to Convolutional Neural Network}
+\author{ 薛盛可 \thanks{College of Information Science and Electronic Engineering, Zhejiang University.~ e-mail:~xueshengke@zju.edu.cn} }
+\date{\today}
+
+\begin{document}
+	\maketitle
+
+\input{section/Introduction}
+\input{section/CNN}
+\input{section/Feedforward}
+\input{section/Backpropagation}
+\input{section/Application}
+\input{section/Trial}
+
+\bibliographystyle{ieeetr}
+\bibliography{mybibliography}
+
+\end{document}
+
