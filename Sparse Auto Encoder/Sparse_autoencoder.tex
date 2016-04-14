@@ -61,7 +61,7 @@
         \includegraphics[width=0.3\textwidth]{figure/autoencoder.png}
     \end{figure}
     \end{minipage}
-    限定隐藏神经元的数量，我们就可以从输入数据中发现一些有趣的结构。举例来说，假设输入~$x$~是一张$10 \times 10$图像(100个像素)的像素值，于是 $n=100$ ，其隐藏层$L_2$中有50个隐藏神经元。注意，输出也是100维的$ y \in \mathbf{R}^{100}$ 。由于只有50个隐藏神经元，迫使自编码神经网络去学习输入数据的一种压缩表示，也就是说，它必须从50维的隐藏神经元激活向量~$a^{(2)} \in \mathbf{R}^{50}$中重构出100维的像素灰度值输入~$x$ 。\\
+    限定隐藏神经元的数量，我们就可以从输入数据中发现一些有趣的结构。举例来说，假设输入~$x$~是一张$10 \times 10$图像(100个像素)的像素值，于是 $n=100$ ，其隐藏层$L_2$中有50 个隐藏神经元。注意，输出也是100维的$ y \in \mathbf{R}^{100}$ 。由于只有50个隐藏神经元，迫使自编码神经网络去学习输入数据的一种压缩表示，也就是说，它必须从50维的隐藏神经元激活向量~$a^{(2)} \in \mathbf{R}^{50}$中重构出100维的像素灰度值输入~$x$ 。\\
     如果输入数据中隐含着一些特定的结构，比如某些输入特征是彼此相关的，那么这一算法就可以发现输入数据中的这些相关性。
 \end{frame}
 
@@ -156,7 +156,7 @@ J(W,b)
 
 \section{多层网络结构}
 \begin{frame}{深度神经网络}
-    我们可以用多个自编码神经网络构建深度神经网络，用于图像分类。
+    我们可以用多个自编码神经网络构建深度神经网络，可用于图像分类。
     \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.4\textwidth]{figure/deep_neural_network.png}
@@ -186,7 +186,7 @@ J(W,b)
 %    \includegraphics[width=0.25\textwidth]{figure/train_second_network.png}
 %    \includegraphics[width=0.25\textwidth]{figure/train_third_network.png}
 %    \end{figure}
-    首先是（非监督）训练第一层，然后保存权值（{\color{green} 绿色}）和隐藏层的输出，舍弃之后的部分；第二层（{\color{red} 红色}）的权值也类似；最后一层是（监督）训练softmax分类器的权值({\color{yellow} 黄色})。
+    首先是（非监督）训练第一层，然后保存权值（{\color{green} 绿色}）和隐藏层的输出（用于训练第二层），舍弃之后的部分；第二层（{\color{red} 红色}）的权值也类似；最后一层是（监督）训练softmax 分类器的权值({\color{yellow} 黄色})。
 \end{frame}
 
 \begin{frame}{深度神经网络}
@@ -232,7 +232,7 @@ J(W,b)
     \caption{第二层权值}
     \end{figure}
     \end{minipage} \\
-    准确率有89.34\%，其实自编码网络的结构权值参数过多，所以性能并不好，不能与CNN相比拟。
+    准确率有89.34\%，其实自编码网络的结构权值参数过多，所以性能并不好，不能与CNN相比拟，目前也不是研究热点。
 \end{frame}
 
 \section{参考文献}
@@ -242,6 +242,8 @@ J(W,b)
 %    \bibliography{mybibliography}
     内容来自 Andrew Ng,~et~al.~UFLDL教程~@ Stanford University. \\
     \url{http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial}
+    \\~\\
+    Andrew Ng \footnote{\url{http://www.andrewng.org/}}（1976年－）是斯坦福大学计算机科学系和电气工程系的副教授。2011年，在Google创建了Google Brain项目，通过分布式集群计算机开发超大规模的人工神经网络（使用1000台电脑训练包含10亿个连接的“神经网络”，使机器系统学会自动识别猫）。2014年5月，加入百度，负责“百度大脑”计划，并担任百度公司首席科学家。
 \end{frame}
 
 \begin{frame}{End}
